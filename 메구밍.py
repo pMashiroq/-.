@@ -1,4 +1,6 @@
 import discord
+import os
+
 
 client = discord.Client()
 
@@ -72,5 +74,5 @@ async def on_message(message):
     if message.content.startswith("?익스플로젼2"):
         await message.channel.send("저한테 맡겨주세요! 하하하하하! 나의 폭렬 마법을 받아라!!! 「익스플로전!!」 (안나옴..) 마력이!!! 큰일났어요! 폭렬 마법을 발동하기 위해 필요한 마력이 부족해요!!!")
 
-
-client.run("NTc0NTI3NjA3MDIyOTQ0MjU2.XM6szg.6b7mfn57GYovuI1b1lWfeZLnSDA")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
